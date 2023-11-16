@@ -26,7 +26,7 @@ const getRollbackMessage = function (price) {
   } else if (price > 0 && price < 15000) {
     return "Скидка не предусмотрена";
   } else {
-    return "Что-то пошло не так";
+    return "Что-то пошло не так!";
   }
 };
 
