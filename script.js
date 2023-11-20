@@ -10,10 +10,6 @@ const servicePrice1 = +prompt("Сколько это будет стоить?");
 const service2 = prompt("Какой дополнительный тип услуги нужен?");
 const servicePrice2 = +prompt("Сколько это будет стоить?");
 
-let allServicePrices;
-let fullPrice;
-let servicePercentPrice;
-
 const showTypeOf = function (variable) {
   console.log(variable, typeof variable);
 };
@@ -48,12 +44,12 @@ const getServicePercentPrice = function (price, rollBack) {
   return price - price * (rollBack / 100);
 };
 
-allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
-fullPrice = getFullPrice(
+let allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
+let fullPrice = getFullPrice(
   screenPrice,
   getAllServicePrices(servicePrice1, servicePrice2)
 );
-servicePercentPrice = getServicePercentPrice(fullPrice, rollBack);
+let servicePercentPrice = getServicePercentPrice(fullPrice, rollBack);
 
 showTypeOf(title);
 showTypeOf(screenPrice);
