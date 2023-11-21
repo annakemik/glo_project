@@ -22,7 +22,7 @@ const asking = function () {
   title = prompt("Как называется ваш проект");
   screens = prompt("Какие типа экранов нужно разработать?");
   while (!isNumber(screenPrice)) {
-    screenPrice = +prompt("Сколько будет стоить данная работа?");
+    screenPrice = prompt("Сколько будет стоить данная работа?");
   }
   adaptive = confirm("Нужен ли адаптив на сайте?");
 };
