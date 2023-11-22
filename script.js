@@ -44,12 +44,9 @@ const getServicePercentPrice = function (price, rollBack) {
   return price - price * (rollBack / 100);
 };
 
-let allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
-let fullPrice = getFullPrice(
-  screenPrice,
-  getAllServicePrices(servicePrice1, servicePrice2)
-);
-let servicePercentPrice = getServicePercentPrice(fullPrice, rollBack);
+const allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
+const fullPrice = getFullPrice(screenPrice, allServicePrices);
+const servicePercentPrice = getServicePercentPrice(fullPrice, rollBack);
 
 showTypeOf(title);
 showTypeOf(screenPrice);
