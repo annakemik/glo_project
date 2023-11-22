@@ -23,13 +23,13 @@ const showTypeOf = function (variable) {
 };
 
 const asking = function () {
-  title = prompt("Как называется ваш проект", "Rerf");
-  screens = prompt("Какие типа экранов нужно разработать?", "fdsfm fdsf");
-  while (!isNumber(screenPrice)) {
+  title = prompt("Как называется ваш проект");
+  screens = prompt("Какие типа экранов нужно разработать?");
+  do {
     screenPrice = prompt("Сколько будет стоить данная работа?");
     if (userCancel(screenPrice)) break;
     screenPrice = +screenPrice.trim();
-  }
+  } while (!isNumber(screenPrice));
   adaptive = confirm("Нужен ли адаптив на сайте?");
 };
 
